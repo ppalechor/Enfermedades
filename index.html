@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de EPAs y Tratamientos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>Gestión de EPAs</h1>
+      <form id="epaForm" autocomplete="off">
+        <input type="hidden" id="epaId">
+        <div class="form-group">
+          <label for="nombreEpa">Nombre EPA:</label>
+          <input type="text" id="nombreEpa" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcionEpa">Descripción:</label>
+          <textarea id="descripcionEpa" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Guardar EPA</button>
+          <button type="button" id="btnLimpiarEpa">Limpiar</button>
+        </div>
+      </form>
+      <table id="epaTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h1>Gestión de Tratamientos</h1>
+      <form id="tratamientoForm" autocomplete="off">
+        <input type="hidden" id="tratamientoId">
+        <div class="form-group">
+          <label for="descripcionTratamiento">Descripción:</label>
+          <input type="text" id="descripcionTratamiento" required>
+        </div>
+        <div class="form-group">
+          <label for="dosisTratamiento">Dosis:</label>
+          <input type="text" id="dosisTratamiento">
+        </div>
+        <div class="form-group">
+          <label for="frecuenciaTratamiento">Frecuencia:</label>
+          <input type="text" id="frecuenciaTratamiento">
+        </div>
+        <div class="form-group">
+          <label for="epaIdTratamiento">EPA ID:</label>
+          <input type="number" id="epaIdTratamiento" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Guardar Tratamiento</button>
+          <button type="button" id="btnLimpiarTratamiento">Limpiar</button>
+        </div>
+      </form>
+      <table id="tratamientoTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Dosis</th>
+            <th>Frecuencia</th>
+            <th>EPA ID</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <script type="module" src="main.js"></script>
+ 
+</body>
+</html>
